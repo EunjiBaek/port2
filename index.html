@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ko" class="has-scroll-init has-scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+
+    <!--css-->
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="./assets/img/favicon/favicon_72.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="96x96"
+      href="assets/icons/favicon_96.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="assets/icons/favicon_144.png"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="192x192"
+      href="assets/icons/favicon_192.png"
+    />
+
+    <!-- 스크롤 위치 기억하여 뿌려주기 시작 -->
+    <script language="javascript" for="plan6" event="onload">
+      //plan6이라는 frame이 onload될때 스크립트를 실행.
+
+      var strCook = document.cookie; //저장된 쿠키 값을 받아온다.
+      if (strCook.indexOf("!~") != 0) {
+        var intS = strCook.indexOf("!~");
+        var intE = strCook.indexOf("~!");
+        var strPos = strCook.substring(intS + 2, intE); //스크롤 위치를 구한다.
+        document.body.scrollTop = strPos; //스크롤 위치를 적용시킨다.
+      }
+      document.plan6.resizeFrame(this);
+    </script>
+
+    <!-- 스크롤 위치 쿠키에 저장 -->
+
+    <script type="text/javascript">
+      function SetDivPosition() {
+        var intY = document.body.scrollTop;
+        document.cookie = "yPos=!~" + intY + "~!";
+      }
+    </script>
+  </head>
+  <body onscroll="SetDivPosition()">
+    <header id="header">
+      <div class="header_inner row">
+        <ul class="gnb">
+          <li><a href="#">MAIN</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SITE</a></li>
+          <li><a href="#">MOBILE</a></li>
+          <li><a href="#">SCRIPT</a></li>
+        </ul>
+        <a class="contact" href="#">CONTACT ME</a>
+        <button class="btn-menu" type="button">모바일 메뉴</button>
+      </div>
+    </header>
+    <main
+      id="main"
+      data-scroll-container
+      data-scroll-section-inview
+      class="container"
+    >
+      <!--section1-->
+      <section id="section1" class="section">
+        <div class="wrapper">
+          <h1>
+            <em
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              >FRONTEND</em
+            >
+            <em
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="2"
+              >DEVELOPER</em
+            >
+          </h1>
+          <div class="scroll-dowm">
+            scroll
+            <svg
+              version="1.1"
+              id="svg-arrow-down"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 22 35"
+              style="enable-background: new 0 0 22 35"
+              xml:space="preserve"
+            >
+              <polygon
+                class="arrow"
+                style="fill: #000000"
+                points="20.58,11.584 12.004,20.158 12.004,0 9.996,0 9.996,20.158 1.42,11.584 0,13.004 11,24
+                              22,13.004 "
+              ></polygon>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <!--//section1-->
+      <section id="section2" class="section">
+        <div class="about">
+          <h2
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="-1"
+          >
+            ABOUT ME
+          </h2>
+          <div class="about-wrap">
+            <div class="img">
+              <img src="./assets/img/background/aboutme_img_04.jpg" alt="" />
+            </div>
+            <div class="cnt">
+              <div class="first_cnt">
+                <span>Creative Frontend Develper</span>
+
+                <div>
+                  <p>
+                    디자이너로 업무 경험을 쌓다가 우연한 계기로 코딩을 배우게
+                    됐고, 늦은 나이지만 퍼블리셔로 아트경매 회사인 케이옥션에
+                    입사하게 됐습니다. 늦게 배운 만큼 다른 사람보다 더 많은
+                    시간을 투자해야 발전할 수 있다는 생각을 항상 해왔고, 그 결과
+                    회사에서도 좋은 성과를 받았고 입사한지 1년만에 진급을
+                    했씁니다. 회사에 입사하자마자 회사에서 처음 도입하는 라이브
+                    경매 프로젝트에 참여하게 되었고, 그 프로젝트가 처음
+                    퍼블리셔로 성장할 수 있는 발판이 되었습니다. 그동안
+                    디자이너로 일을 해왔기 때문에 디자이너와의 소통이 원활하게
+                    이루어졌고, 더 나아가 개발자만 있는 팀 안에서 중간다리
+                    역할을 하기 위해 개발 영역까지 역량을 넓혔습니다.
+                  </p>
+
+                  <p>
+                    퍼블리셔로 입사했지만 프론트엔드 개발까지 가능하게 되었고,
+                    현 회사에서 자바스크립트 라이브러리인 리액트를 활용하여
+                    페이지를 개선하는 것을 제안하였고, 프로젝트를 수행하게
+                    되었습니다. 신규라이브페이지 프로젝트를 실행하면서, 스스로
+                    여러가지 방법들을 찾아가면서 업무 스킬 능력을 쌓았습니다.
+                    회사에서 항상 팀원과의 소통을 중요하게 생각했고, 그 능력이
+                    어느 회사에 가든 도움이 될 거라고 생각하고 있습니다. 현실에
+                    안주하지 않고 업무 스킬 향상을 위해 자발적으로 노력하였고 그
+                    꾸준함이 항상 도움이 되었습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="secont_cnt">
+                <span>Do you want to be</span>
+
+                <p>
+                  업무를 하면서 제역할 뿐만아니라 팀과의 시너지 효과를 내기
+                  위해서 각자 적극적인 제안, 참여가 필요하다고
+                  생각했습니다.다음에 작업하는 사람들을 위해서 어떻게 하면
+                  다른사람이 더 편리하게 작업할수 있을지를 끝없이 생각하는 것이
+                  중요하다고 생각합니다 그래서 저는 팀과의 소통, 팀의
+                  시너지효과, 팀의 성과 또한 중요하다는 생각을 하고 업무에
+                  임하고, 생각하는 개발자가 되고 싶습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="section3" class="horizontal-scroll">
+        <div class="web_title">
+          <h2 data-scroll data-scroll-speed="-1">
+            Site Work <br />
+            For CREATIVE
+          </h2>
+        </div>
+        <div class="pin-wrap">
+          <div class="secsub">
+            <h3>NO1. Kauction Renewal</h3>
+            <div class="site_flxe">
+              <p>
+                케이옥션 홈페이지 리뉴얼을 목적으로한 프로젝트입니다. 기존의
+                디자인보다 통일성 있고 사용자의 편의성을 고려한 페이지로
+                제작하였습니다. 퍼블리싱뿐만아니라 ui/ux 디자인에도 적극적으로
+                제안, 참여하였습니다. 중복된 코드 정리를 위하여 제이쿼리
+                플러그인, 모듈화를 진행하였습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">jQuery</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Javascript</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Swiper Slide</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Media Query</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub">
+            <h3>NO2. Mega Box</h3>
+            <div class="site_flxe">
+              <p>
+                메가박스 영화관 사이트를 리뉴얼한 사이트로, 반응형에 맞게
+                제작하였습니다. 웹표준 문법을 준수하며 구축하였습니다.
+                스와이퍼를 활용하여 메인비주얼 슬라이더를 구현하였고 제이쿼리로
+                탭메뉴를 만들어 영화차트와 공지사항을 만들었습니다. 폼요소로
+                영화를 예약할 수 있는 창을 만들고 모달창을 추가해 영화
+                트레일러를 재생할 수 있도록 제작했습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Simantic Tag</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Swiper Slide</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Media Query</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container"> jQuery</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub">
+            <h3>NO3. Responsive Web</h3>
+            <div class="site_flxe">
+              <p>
+                미디어 쿼리를 이용하여 PC, Tablet, Mobile 등의 디바이스에서도
+                유연하게 이용할 수 있도록 반응형으로 제작하였습니다. 이로써
+                대부분의 디바이스에서 PC에서 이용하는 것과 같이 여러 정보를
+                열람할 수 있으며 어떤 곳에서든 편리하게 이용할 수 있도록
+                제작하였습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Simantic Tag</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Media Query</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container"> jQuery</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub">
+            <h3>NO4. Standards Web</h3>
+            <div class="site_flxe">
+              <p>
+                웹 표준과 웹 접근성을 준수하여 제작한 웹 사이트입니다. 웹을
+                사용하는 모든 사람에 있어서 제약을 주지 않고 이용할 수 있게
+                제작되었으며, 시각 장애를 가진 사용자를 고려하여 IR 효과를
+                사용하였습니다. 스크린 리더기를 통한 설명도 가능하여 제약 없이
+                모든 정보를 열람할 수 있도록 제작하였습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Slick.js</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Lightbox</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container"> jQuery</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub">
+            <h3>NO6. Nike Main</h3>
+            <div class="site_flxe">
+              <p>
+                나이키 메인페이지 리뉴얼 홈페이지이빈다. 비디오태그를 사용하여
+                영상을 메인으로 사용하였습니다. 다양한 tansfrom, transition으로
+                다양한 애니메이션 효과를 주어 메인을 돋보이게 만들었습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">jQuery</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">transform</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">keyframe</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container"> jQuery</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="section3_2"
+        data-textcolor
+        data-bgcolor
+        data-linecolor="1px solid #2b3826"
+      >
+        <article class="Publ_common">
+          <div class="publ_flexbox">
+            <div class="publ_img_box">
+              <div class="img_wrap">
+                <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+              </div>
+              <div class="text_box">
+                <span>jQuery / Javascript / Media Query</span>
+                <p>
+                  케이옥션 기존홈페이지는 적응형홈페이지였습니다. 리뉴얼을
+                  하면서 반응형으로 바뀌었고, 디자인 가이드를 통해서 기존보다
+                  통일된 홈페이지로 바뀌었습니다. Slick.js, Swiper.js로 새로운
+                  배너 영역을 만들었으며, 탭메뉴, 체크박스, 모달팝업등 다시
+                  사용할 수 있는 함수는 모듈화하는 작업을 진행하였습니다.
+                </p>
+              </div>
+            </div>
+            <div class="publ_box">
+              <div class="text_wrap">
+                <h3>Kauction</h3>
+                <div>
+                  <p>
+                    미술품경매회사인 케이옥션에 입사해서 두번째로 맡은
+                    프로젝트가 자사 홈페이지 리뉴얼 퍼블리싱 업무였습니다. 처음
+                    맡은 프로젝트였기 때문에 검색하고 찾아가면서 만드는 일이
+                    다수였습니다.
+                  </p>
+                  <p class="center">
+                    처음에는 화면에 보여지는것에만 충실하였지만, 후에는
+                    리팩토링의 중요성을 깨달았습니다. 단순한 업무는 개발자들도
+                    작업할 수 있도록 소스를 정리하는일에도 충실하였습니다.
+                  </p>
+                  <p>
+                    중복된 코드는 정리하고, 다음에 쓸수 있는 함수들은 모듈화하고
+                    플러그인 제작을 하였습니다. 또한 ui/ux 디자인에도 적극적으로
+                    제안, 참여하였습니다. 아이콘 제작이나 테이블디자인,
+                    이메일폼등 다양한 ui/ux디자인에 참여하였습니다.
+                  </p>
+                </div>
+                <a href="Standards_Web/index.html" target="_blank"
+                  >Visit Website</a
+                >
+                <a href="#" class="code_view">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="Publ_common">
+          <div class="publ_flexbox">
+            <div class="publ_img_box">
+              <div class="img_wrap">
+                <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+              </div>
+              <div class="text_box">
+                <span> Semantic Tag / Hover / Movie</span>
+                <p>
+                  반응형 홈페이지로 제작하였고, 여러 매서드를 사용하여 제이쿼리
+                  메서드 체이닝을 통해 간결한 소스를 만들도록 하였습니다.
+                  메인배너는 Swiper.js를 사용하였습니다. 해상도별로 이미지가
+                  변경될수 있도록 작업하였고, 제이쿼리로 처음으로 동적요소를
+                  만든 사이트입니다.
+                </p>
+              </div>
+            </div>
+            <div class="publ_box">
+              <div class="text_wrap">
+                <h3>Mega Box</h3>
+                <div>
+                  <p>
+                    기존 메가박스 웹 사이트를 리뉴얼하였습니다. 최소한의
+                    디바이스 크기까지 고려하여 제작한 사이트입니다. 사이트를
+                    제작하면서 사용자가 편리함을 느끼도록 하려면 어떻게 웹을
+                    구성하는지에 대해 고려를 하면서 만들었습니다.
+                  </p>
+                  <p class="center">
+                    또한 제이쿼리를 사용하여 동적인 요소를 어떻게 만드는지에
+                    대해 공부할 수 있었습니다. 그리고 제이쿼리로 동적인 요소를
+                    만들면서 자바스크립트와 비교하여 어떤점이 장점인지,
+                    단점인지에 대해 고려를 해볼 수 있었습니다.
+                  </p>
+                  <p>
+                    홈페이지를 만들면서 웹표준, 웹접근성에 대해서 또 한번
+                    생각할수 있었고, 작업을 할때 어떤식으로 소스를 정리하면
+                    좋을지에 대해서도 고려할수 있었습니다.
+                  </p>
+                </div>
+                <a href="Standards_Web/index.html" target="_blank"
+                  >Visit Website</a
+                >
+                <a href="#" class="code_view">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="Publ_common">
+          <div class="publ_flexbox">
+            <div class="publ_img_box">
+              <div class="img_wrap">
+                <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+              </div>
+              <div class="text_box">
+                <span>Semantic Tag / Media Query</span>
+                <p>
+                  반응형에서 필수적인 미디어쿼리에 대해 처음으로 접하게
+                  되었습니다. 또한 slick.js lightbox등 플러그인을 사용하였고,
+                  해상도에 대한 이미지 변환, 영상 삽입 방법등에 대해 공부하면서
+                  만든 사이트입니다.
+                </p>
+              </div>
+            </div>
+            <div class="publ_box">
+              <div class="text_wrap">
+                <h3>Responsive Web</h3>
+                <div>
+                  <p>
+                    미디어 쿼리를 이용하여 제작한 반응형 웹 사이트 입니. 최근
+                    3년에서 4년 사이 화면 크기가 다이내믹 하게 줄었다 커졌다
+                    하는 여러 종류의 디바이스가 출시되고 있는 만큼 반응형 웹
+                    사이트의 중요도가 더욱더 올라가고 있다고 생각하였습니다.
+                  </p>
+                  <p class="center">
+                    디바이스 크기에 따라 사용자가 불편함을 느끼지 않게 사이트를
+                    제작해야 되겠다는 생각을 하였습니다. 또한 직접 플러그인을
+                    제작하는것도 좋지만 간단한것들은 라이브러리, 플러그인을
+                    사용하여 빠르게 작업하는것도 중요하다고 생각했습니다.
+                  </p>
+                </div>
+                <a href="Standards_Web/index.html" target="_blank"
+                  >Visit Website</a
+                >
+                <a href="#" class="code_view">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="Publ_common">
+          <div class="publ_flexbox">
+            <div class="publ_img_box">
+              <div class="img_wrap">
+                <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+              </div>
+              <div class="text_box">
+                <span>Slick.js / Lightbox / jQuery</span>
+                <p>
+                  Slick.js, lightgallery.js 등 다양한 제이쿼리 플러그인ㄴ을
+                  사용하였습니다. 제이쿼리 사용을 통하여 간단한 메서드와
+                  동적요소를 만들수 있게 되었습니다. 또한 웹표준, 웹접근성에
+                  대한 중요성을 공부하게 되었습니다.
+                </p>
+              </div>
+            </div>
+            <div class="publ_box">
+              <div class="text_wrap">
+                <h3>Web Standards</h3>
+                <div>
+                  <p>
+                    사이트를 만들며 웹 표준의 개념을 공부하였습니다. 웹 표준은
+                    '웹에서 표준적으로 사용되는 기술이나 규칙'으로 W3C에서 나온
+                    권고안을 말하며, 웹 표준을 지키기 위해선 웹 접근성과 웹
+                    호환성을 필수적으로 지켜야 합니다.
+                  </p>
+                  <p class="center">
+                    기존에 막연하게 알았던 '이미지 대체 테스트'의 개념을
+                    명확하게 알 수 있었습니다. '이미지 대체 텍스트'란 웹
+                    접근성을 준수하기 위한 한 방법으로 사용자가 이미지를 볼 수
+                    없을 때, 이미지를 대신 설명해주는 텍스트입니다.
+                  </p>
+
+                  <p>
+                    IR기법은 CSS로 이미지 대체 텍스트를 제공하는 기법입니다.
+                    이전까진 background에도 대체 텍스트를 사용할 수 있다는
+                    사실을 알지 못하였으나, 이 사이트를 만들며 IR 기법에 대해
+                    처음 알게 되었고 웹 접근성을 더욱 더 알아가는 계기가
+                    되었습니다
+                  </p>
+                </div>
+                <a href="Standards_Web/index.html" target="_blank"
+                  >Visit Website</a
+                >
+                <a href="#" class="code_view">View Detail</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="section4" class="horizontal-scroll">
+        <div class="web_title">
+          <h2 data-scroll data-scroll-speed="-1">
+            FrontEnd Work <br />
+            Creative Vue & React
+          </h2>
+        </div>
+        <div class="pin-wrap">
+          <div class="secsub">
+            <h3>NO1. Kauction Live</h3>
+            <div class="site_flxe">
+              <p>
+                기존의 케이옥션 라이브경매 페이지를 리액트로 새롭게
+                리뉴얼하였습니다. 기존에는 데스크탑버전만 지원을 하였지만
+                태블리버전까지 최적화하였습니다. 다양한 npm package를 사용하여
+                더 편리하게 기능들을 구현하였고, typescrip와 리덕스를
+                적용하였습니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">React</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Typescript</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Redux Slide</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">redux-saga</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub">
+            <h3>NO2. Woodaum site</h3>
+            <div class="site_flxe">
+              <p>
+                프랜차이즈 우다움 사이틑 vue 프레임워크를 사용하여
+                제작하였습니다. 중복 사용하는 컴포넌트들은 따로 정리를 하였고,
+                다국어처리까지 완료한 사이트입니다. 우다움 브랜드의 특성을
+                생각하여 ui/ux에도 적극 참여, 제안을 하였습니다. 미디어쿼리를
+                사용한 반응형 사이트입니다.
+              </p>
+              <div class="site_link">
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">VUe</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Swiper Slide</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Media Query</span>
+                  </a>
+                </div>
+                <div class="button_su">
+                  <span class="su_button_circle"> </span>
+                  <a href="#" class="button_su_inner">
+                    <span class="button_text_container">Lazy load</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="secsub"></div>
+        </div>
+      </section>
+
+      <section id="section4_2">
+        <article class="front_common">
+          <h2>REACT</h2>
+          <div class="img_wrap">
+            <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+          </div>
+          <div class="text_wrap">
+            <h3>01. Kauction Live</h3>
+            <div class="cnt">
+              <p>
+                케이옥션 라이브 경매페이지는 온라인에서도 사용자가 편리하게
+                경매할수 있게 만든 페이지입니다. 기존 라이브경매페이지를
+                리액트를 공부해서 새롭게 리뉴얼 하자는 제안을 하였습니다.
+                상태관리를 편리하게 할 수 있는 중앙집합체 역할을 하는 리덕스를
+                적용하였고, 비동기 작업을 유연하게 할수 있도록 도와주는
+                redux-saga를 사용하였습니다.
+              </p>
+
+              <p>
+                디렉터리 구조는 액션을 만드는함수, 리덕스를 관리하는 곳, saga를
+                관리하는곳, api를 불러오는곳, 컴포넌트를 감싸고있고 컴포넌트에
+                데이터를 관리해주는 container폴더, 페이지의 순수 마크업만을
+                담당하는 components폴더로 분리하였습니다. 상태관리를 편리하게
+                해주는 리덕스를 통해서 api를 굳이 불러오지 않더라도 ui를
+                사용자에게 미리 보여줄수 있도록 구성하였습니다.
+              </p>
+
+              <p>
+                또한 react-intl(다국어 패키지)를 사용하여 다국어처리까지 완료한
+                페이지입니다. 실시간 라이브 경매인만큼 응찰을 했을때 응찰처리가
+                잘 이루어지는지, 응찰에 대한 오류가 발생했을경우, 응찰을
+                관리자화면에서 취소나 삭제했을 경우 에러처리가 잘 이루어지는지에
+                대한 고려를 하였습니다.
+              </p>
+            </div>
+            <div class="fe_link">
+              <a href="#" target="_blank">Visit Proposal</a>
+              <a href="#" target="_blank">Visit Test</a>
+              <a href="#" target="_blank">Visit Source</a>
+            </div>
+          </div>
+        </article>
+        <article class="front_common">
+          <h2>VUE</h2>
+          <div class="img_wrap">
+            <img src="./assets/img/siteImg/web01.jpeg" alt="" />
+          </div>
+          <div class="text_wrap">
+            <h3>02. Woodaum Site</h3>
+            <div class="cnt">
+              <p>
+                프랜차이즈 우다움 사이트를 vue를 사용하였습니다. 컴포넌트의
+                재사용성을 높이기위해서 vue 프레임워크를 사용하였습니다.
+                리액트와 마찬가지로 다국어처리까지 완료한 페이지입니다.
+                다국어처리는 vue-18in을 사용하였습니다.
+              </p>
+
+              <p>
+                사이트를 제작하면서 v-if, v-show등 조건부 렌더링에 대해 공부할
+                수 있었습니다. 또한 mounted, created의 차이를 알고
+                적용하였습니다. 배포는 netlify를 통해서 하였고, nelify와
+                도메인을 연결해서 사이트를 오픈하였습니다.
+              </p>
+
+              <p>
+                이미지로드가 느린감이 있어서 vue 디렉티브를 커스텀하여
+                lazyload를 구현하였습니다. 공통된 컴포넌트와 중복되는 컴포넌트는
+                따로 정리하였습니다. 또한 우다움 브랜드의 디자인가이드를
+                참고하여 ui/ux 디자인에도 적극 참여, 제안을 하였습니다.
+              </p>
+            </div>
+            <div class="fe_link">
+              <a href="#" target="_blank">Visit Design</a>
+              <a href="#" target="_blank">Visit Site</a>
+              <a href="#" target="_blank">Visit Source</a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+    <span class="c-scrollbar"><span class="c-scrollbar_thumb"></span></span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="./assets/js/style.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.js"></script>
+  </body>
+</html>

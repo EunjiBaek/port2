@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+body {
+  overflow-x: hidden;
+  background: #f5f5f5;
+}
+
+.row {
+  padding: 0 20px;
+}
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* a 링크 초기화 */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  color: #000000;
+}
+
+body,
+button,
+input,
+select,
+table,
+textarea {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #202020;
+  /* font-family: 'Gilda Display', serif; */
+  font-family: "GmarketSans", NewYork, NexonLv1GothicLow, -apple-system,
+    BlinkMacSystemFont, "Malgun Gothic", helvetica, "Apple SD Gothic Neo",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 폰트 스타일 초기화 */
+em,
+address {
+  font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+h2 {
+  font-family: "NewYork";
+  font-size: 9.5vw;
+  line-height: 1em;
+}
+
+/* 테두리 초기화 */
+img,
+fieldset {
+  border: 0 none;
+}
+
+/* 버튼 초기화 */
+button {
+  border: 0;
+}
+
+/* clearfix */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* IR 효과 */
+.ir_pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우(Phark Method) */
+.ir_wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할 때(WA IR) */
+.ir_so {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+} /* 대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때 */
+
+/* 아이콘 이미지 최적화 작업 */
+.icon {
+  background-image: url(../img/icon.png);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx) {
+  .icon {
+    background-image: url(../img/icon@2.png);
+    background-size: 500px;
+  }
+}
+
+/* input style */
+input {
+  background-image: none;
+}
+input[type="button"],
+input[type="reset"],
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="search"],
+input[type="tel"],
+input[type="email"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input:checked[type="checkbox"] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+div::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 12px;
+}
+div::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+div::-webkit-scrollbar-track body::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+}
