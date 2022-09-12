@@ -388,6 +388,9 @@
 .front_common .img_wrap {
   height: 50vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .front_common .img_wrap > img {
   width: 100%;
