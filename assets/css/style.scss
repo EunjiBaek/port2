@@ -676,3 +676,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #header .gnb,
+  #header .header_inner .contact {
+    display: none;
+  }
+  #header .header_inner {
+    justify-content: flex-end;
+  }
+  #header .header_inner .btn-menu {
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: url(../img/menu.png) no-repeat;
+    background-size: cover;
+    display: block;
+  }
+}

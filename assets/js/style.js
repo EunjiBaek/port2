@@ -150,4 +150,68 @@ $(document).ready(function () {
     $(this).prev(".su_button_circle").removeClass("explode-circle");
     $(this).prev(".su_button_circle").addClass("desplode-circle");
   });
+
+  // 모달팝업 script
+  const get = (target) => {
+    return document.querySelector(target);
+  };
+
+  const getAll = (target) => {
+    return document.querySelectorAll(target);
+  };
+
+  const $modal = get(".modal");
+  const $modalCancelButton = get(".modal_button.cancel");
+  const $body = get("body");
+  const $modal_header = document.querySelector(
+    ".modalContent > .modal_header > span"
+  );
+  const $modal_subtitle = document.querySelector(
+    ".modalContent > .sub_title > span"
+  );
+  const $modal_body = document.querySelector(".modalContent > .modal_body");
+  const $detail_page_btn = getAll(".detail_page_btn");
+
+  // 모달내용 비우기
+  $modal_header.innerHTML = undefined;
+  $modal_subtitle.innerHTML = undefined;
+  $modal_body.innerHTML = undefined;
+
+  const toggleModal = () => {
+    $modal.classList.toggle("show");
+    $body.classList.toggle("scroll_lock");
+    document.querySelector("html").classList.toggle("scroll_lock");
+  };
+
+  $detail_page_btn.forEach(function (elem) {
+    elem.addEventListener("click", function (e) {
+      e.preventDefault();
+      toggleModal();
+      $modal_body.scrollTop = "0";
+      let $header = elem.getAttribute("data-header"),
+        $value = elem.getAttribute("data-value");
+      $modal_header.textContent = $header;
+      $modal_subtitle.textContent = $value;
+
+      let idx = Array.from($detail_page_btn).indexOf(e.currentTarget);
+      $modal_body.innerHTML = "";
+      if (idx === 0) {
+        $modal_body.innerHTML = `<img src="./assets/img/publishing_detail/Kauction_renewal_detail.png" alt="" style="box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);">`;
+      } else if (idx === 1) {
+        $modal_body.innerHTML = `<img src="./assets/img/publishing_detail/megabox_detail.png" alt="" style="box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);">`;
+      } else {
+        $modal_body.innerHTML = `<img src="./assets/img/publishing_detail/nike_detail.png" alt="" style="box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.1);">`;
+      }
+    });
+  });
+
+  $modalCancelButton.addEventListener("click", () => {
+    toggleModal();
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === $modal) {
+      toggleModal();
+    }
+  });
 });
