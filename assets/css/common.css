@@ -49,8 +49,8 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #2b3826;
-  width: 13px;
+  background-color: #000000;
+  width: 10px;
   border-radius: 10px;
   margin: 2px;
   cursor: -webkit-grab;
@@ -59,4 +59,8 @@ html.has-scroll-dragging {
 .has-scroll-dragging .≈≈ {
   cursor: -webkit-grabbing;
   cursor: grabbing;
+}
+.sec3_title,
+.sec4_title {
+  display: none;
 }

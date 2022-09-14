@@ -131,6 +131,19 @@ window.addEventListener("load", function () {
 });
 
 $(document).ready(function () {
+  // 햄버거메뉴
+  $(".btn-menu").click(function () {
+    $(".slide_menu_wrap").addClass("show");
+  });
+
+  $("nav.slide_menu a").click(function (e) {
+    $(".slide_menu_wrap").removeClass("show");
+  });
+
+  $(".mgnb-close").click(function (e) {
+    $(".slide_menu_wrap").removeClass("show");
+  });
+
   $(".button_su_inner").mouseenter(function (e) {
     var parentOffset = $(this).offset();
 
