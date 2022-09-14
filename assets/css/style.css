@@ -961,7 +961,11 @@ nav.slide_menu a:hover::after {
     font-size: 16px;
   }
   .publ_flexbox .publ_box > .text_wrap > div > p.center {
-    padding: 0 30px;
+    padding: 0;
+  }
+
+  .publ_flexbox .publ_box > .text_wrap > div > p.center {
+    padding: 0;
   }
 
   .publ_flexbox .publ_box > .text_wrap {
