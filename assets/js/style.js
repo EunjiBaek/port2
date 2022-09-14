@@ -1,74 +1,28 @@
-//   function scrollProgress() {
-//     let scrollTop =
-//       (document.documentElement.scrollTop ||
-//         window.scrollY ||
-//         window.pageYOffset) + window.innerHeight;
-//     const section1_tit = document.querySelector("#section1 h1");
-//     if (scrollTop > section1_tit.offsetTop) {
-//       let offset = (scrollTop - section1_tit.offsetTop) * 0.05;
-//       document.querySelector("#section1 h1 >em:first-child").style.transform =
-//         "translateX(" + -offset + "px)";
-//       document.querySelector("#section1 h1 >em:last-child").style.transform =
-//         "translateX(" + offset + "px)";
-//     }
-//   }
-//   window.addEventListener("scroll", scrollProgress);
-// gsap.registerPlugin(ScrollTrigger);
-// const pageContainer = document.querySelector(".container");
-// const scroller = new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   smooth: true,
-// });
+const header = document.querySelector("#header");
 
-// scroller.on("scroll", ScrollTrigger.update);
+//로딩소스
+let loader = document.querySelector(".loader");
+let loaderText = document.querySelector(".loader-text");
+let num = 0;
+let interval = setInterval(progress);
 
-// ScrollTrigger.scrollerProxy(".container", {
-//   scrollTop(value) {
-//     return arguments.length
-//       ? scroller.scrollTo(value, 0, 0)
-//       : scroller.scroll.instance.scroll.y;
-//   },
-//   getBoundingClientRect() {
-//     return {
-//       left: 0,
-//       top: 0,
-//       width: window.innerWidth,
-//       height: window.innerHeight,
-//     };
-//   },
-//   pinType: pageContainer.style.transform ? "transform" : "fixed",
-// });
+function Isloading() {
+  progress();
+}
 
-// window.addEventListener("load", function () {
-//   let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-//   let pinWrap = document.querySelector(".pin-wrap");
-//   let pinWrapWidth = pinWrap.offsetWidth;
-//   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+Isloading();
 
-// Pinning and horizontal scrolling
+function progress() {
+  num++;
+  loaderText.innerText = num + "%";
 
-//   gsap.to(".pin-wrap", {
-//     scrollTrigger: {
-//       scroller: pageContainer, //locomotive-scroll
-//       scrub: true,
-//       trigger: "#section3",
-//       pin: true,
-//       // anticipatePin: 1,
-//       start: "top top",
-//       end: pinWrapWidth,
-//     },
-//     x: -horizontalScrollLength,
-//     ease: "none",
-//   });
-
-//   ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-//   ScrollTrigger.refresh();
-// });
-
-// ScrollTrigger.addEventListener("refresh", () => scroller.update());
-
-// ScrollTrigger.refresh();
+  if (num === 100) {
+    clearInterval(interval);
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+  }
+}
 
 window.addEventListener("load", function () {
   gsap.registerPlugin(ScrollTrigger);
@@ -228,3 +182,12 @@ $(document).ready(function () {
     }
   });
 });
+
+// 메인 이펙트
+function loading() {
+  setTimeout(() => {
+    const tl = gsap.timeline();
+    tl.to("#header", { duration: 0.5, top: 0 });
+  }, 10500);
+}
+loading();
