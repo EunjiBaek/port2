@@ -1016,4 +1016,11 @@ nav.slide_menu a:hover::after {
   .mobile_wrap .box_wrap .mobile_common .cnt_wrap > p {
     font-size: 16px;
   }
+  .mobile_wrap .box_wrap .mobile_common .img_wrap > img {
+    width: auto;
+    height: 100%;
+  }
+  .mobile_wrap .box_wrap .mobile_common > .tit h3 {
+    font-size: 20px;
+  }
 }
