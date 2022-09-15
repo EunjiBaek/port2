@@ -1,4 +1,6 @@
 const header = document.querySelector("#header");
+const mainText = document.querySelector(".main-text");
+const scroll = document.querySelector(".scroll-dowm");
 
 //로딩소스
 let loader = document.querySelector(".loader");
@@ -20,6 +22,10 @@ function progress() {
     clearInterval(interval);
     setTimeout(() => {
       loader.style.display = "none";
+
+      gsap.from(header, { duration: 0.8, opacity: 0, delay: 0.1 });
+      gsap.from(mainText, { duration: 0.8, y: -20, opacity: 0, delay: 1 });
+      gsap.from(scroll, { duration: 1, y: -20, opacity: 0, delay: 1.3 });
     }, 500);
   }
 }
